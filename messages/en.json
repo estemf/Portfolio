@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "cv": "Download résumé"
+  },
+  "hero": {
+    "status": "Available for apprenticeship — Fall 2026",
+    "title_pre": "Full Stack",
+    "title_main": "Developer",
+    "title_post": "who codes, designs and ships.",
+    "lede": "Master’s student in Software Architecture & Engineering at DIIAGE. I build complete web products — from e-commerce to internal tools — end-to-end, from discovery to production.",
+    "cta_projects": "See projects",
+    "cta_contact": "Get in touch",
+    "scroll": "Scroll",
+    "tag_freelance": "Freelance & apprenticeship",
+    "identity": {
+      "label": "Profile",
+      "status": "Open",
+      "role": "Full Stack Developer · 21",
+      "years": "Since 2023"
+    },
+    "terminal": {
+      "role": "Full Stack Developer",
+      "output": "Let’s build something together."
+    },
+    "services": {
+      "web": {
+        "title": "Web apps",
+        "desc": "Custom platforms & internal tools, from idea to production."
+      },
+      "ecom": {
+        "title": "E-commerce",
+        "desc": "High-performance stores with Stripe checkout and clean SEO."
+      },
+      "site": {
+        "title": "Marketing sites",
+        "desc": "Calm identities, polished motion and solid performance."
+      }
+    },
+    "stats": {
+      "projects": "Shipped projects",
+      "experience": "Years of practice",
+      "available": "Available from"
+    }
+  },
+  "marquee": {
+    "items": "Next.js / TypeScript / React / Tailwind / Prisma / Postgres / Stripe / Docker / Vue.js / Node.js / Resend / SEO / Agile"
+  },
+  "sections": {
+    "selected_work": "Selected work",
+    "selected_work_sub": "A selection of projects shipped to production — e-commerce, internal tools and showcase sites.",
+    "view_all": "All projects",
+    "skills": "Tech stack",
+    "skills_sub": "The tools I work with every day.",
+    "experience": "Journey",
+    "experience_sub": "Experience and education.",
+    "contact_cta_title": "Let’s build something together.",
+    "contact_cta_sub": "I’m looking for a development apprenticeship for 2026."
+  },
+  "headings": {
+    "featured": { "title": "Selected", "italic": "work" },
+    "all_work": { "title": "All", "italic": "work" },
+    "about": { "title": "About", "italic": "me" },
+    "experience": { "title": "Expe", "italic": "rience" },
+    "education": { "title": "Edu", "italic": "cation" },
+    "contact": { "title": "Let’s say", "italic": "hello." }
+  },
+  "contact_cta": {
+    "line1": "Let’s build",
+    "italic": "something",
+    "line3": "together."
+  },
+  "about": {
+    "title": "About",
+    "intro_label": "Who I am",
+    "intro": "Esteban Fichet, 21, based in Dijon. Hooked on code since high school, I build performant web apps that balance technical rigor and user experience. Curious and self-driven, I enjoy taking projects from idea to production.",
+    "approach_label": "How I work",
+    "approach": "I treat every project like a product: understand the business need first, then build a sober architecture that holds up over time. I write readable code, document what matters, and ship early to iterate fast.",
+    "education": "Education",
+    "experience": "Experience",
+    "now": "Current",
+    "interests": "Interests",
+    "interests_list": "Strength training, New technologies, Sneakers"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Selected work shipped solo or with a team.",
+    "stack": "Stack",
+    "challenge": "Technical challenge",
+    "live": "Visit site",
+    "internal": "Internal project",
+    "back": "Back to projects",
+    "next": "Next project",
+    "preview_alt": "Preview of {name}",
+    "role": "Role",
+    "year": "Year",
+    "overview": "Overview"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "An apprenticeship opportunity, a project, a question? Drop me a line.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Your message",
+    "send": "Send message",
+    "sending": "Sending…",
+    "sent": "Sent",
+    "error": "Something went wrong. Try again or reach me directly by email.",
+    "validation": {
+      "name_min": "Name must be at least 2 characters.",
+      "email_invalid": "Invalid email address.",
+      "message_min": "Message must be at least 10 characters.",
+      "message_max": "Message cannot exceed 5000 characters."
+    },
+    "or": "Or directly",
+    "phone_label": "Phone",
+    "location": "Location",
+    "location_value": "Dijon, France",
+    "availability_label": "Availability",
+    "availability_value": "Right now"
+  },
+  "footer": {
+    "tagline": "Full-stack developer — Dijon, France",
+    "rights": "All rights reserved.",
+    "built": "Designed and developed by Esteban Fichet",
+    "connect_label": "Let’s connect",
+    "cta_pre": "Let’s",
+    "cta_italic": "build",
+    "cta_post": "together.",
+    "sitemap": "Sitemap",
+    "networks": "Social"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact",
+    "cv": "Télécharger le CV"
+  },
+  "hero": {
+    "status": "Disponible pour alternance — Rentrée 2026",
+    "title_pre": "Développeur",
+    "title_main": "Full Stack",
+    "title_post": "qui code, conçoit et déploie.",
+    "lede": "Étudiant en Mastère Architecture & Développement Logiciel au DIIAGE. Je construis des produits web complets — du e-commerce à la plateforme métier — en autonomie, de l’analyse du besoin à la mise en production.",
+    "cta_projects": "Voir les projets",
+    "cta_contact": "Me contacter",
+    "scroll": "Scroll",
+    "tag_freelance": "Freelance & alternance",
+    "identity": {
+      "label": "Profil",
+      "status": "Dispo",
+      "role": "Développeur Full Stack · 21 ans",
+      "years": "Depuis 2023"
+    },
+    "terminal": {
+      "role": "Développeur Full Stack",
+      "output": "Construisons quelque chose ensemble."
+    },
+    "services": {
+      "web": {
+        "title": "Applications web",
+        "desc": "Plateformes & outils métier sur mesure, de l’idée à la prod."
+      },
+      "ecom": {
+        "title": "E-commerce",
+        "desc": "Boutiques performantes, paiement Stripe et SEO soigné."
+      },
+      "site": {
+        "title": "Sites vitrines",
+        "desc": "Identités sobres, animations fines et performances solides."
+      }
+    },
+    "stats": {
+      "projects": "Projets livrés",
+      "experience": "Ans d’expérience",
+      "available": "Disponible dès"
+    }
+  },
+  "marquee": {
+    "items": "Next.js / TypeScript / React / Tailwind / Prisma / Postgres / Stripe / Docker / Vue.js / Node.js / Resend / SEO / Agile"
+  },
+  "sections": {
+    "selected_work": "Projets sélectionnés",
+    "selected_work_sub": "Une sélection de projets livrés en production — sites e-commerce, outils métiers et vitrines.",
+    "view_all": "Tous les projets",
+    "skills": "Stack technique",
+    "skills_sub": "Les outils que j’utilise au quotidien.",
+    "experience": "Parcours",
+    "experience_sub": "Expériences et formations.",
+    "contact_cta_title": "On construit quelque chose ensemble ?",
+    "contact_cta_sub": "Je suis à la recherche d’une alternance en développement pour 2026."
+  },
+  "headings": {
+    "featured": { "title": "Projets", "italic": "sélectionnés" },
+    "all_work": { "title": "Tout", "italic": "le travail" },
+    "about": { "title": "À", "italic": "propos" },
+    "experience": { "title": "Expé", "italic": "riences" },
+    "education": { "title": "For", "italic": "mation" },
+    "contact": { "title": "Disons-nous", "italic": "bonjour." }
+  },
+  "contact_cta": {
+    "line1": "On construit",
+    "italic": "quelque chose",
+    "line3": "ensemble ?"
+  },
+  "about": {
+    "title": "À propos",
+    "intro_label": "Qui je suis",
+    "intro": "Esteban Fichet, 22 ans, basé à Dijon. Passionné par le code depuis le lycée, je conçois des applications web performantes en mêlant exigence technique et soin apporté à l’expérience utilisateur. Curieux et autonome, j’aime gérer un projet de bout en bout.",
+    "approach_label": "Ma façon de travailler",
+    "approach": "Je vois chaque projet comme un produit : comprendre le besoin métier d’abord, puis construire une architecture sobre qui tient dans le temps. J’écris du code lisible, je documente ce qui compte, et je livre tôt pour itérer vite.",
+    "education": "Formation",
+    "experience": "Expériences",
+    "now": "En cours",
+    "interests": "Centres d’intérêt",
+    "interests_list": "Musculation, Nouvelles technologies, Sneakers"
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Sélection de réalisations livrées en autonomie ou en équipe.",
+    "stack": "Stack",
+    "challenge": "Le défi technique",
+    "live": "Voir le site",
+    "internal": "Projet interne",
+    "back": "Retour aux projets",
+    "next": "Projet suivant",
+    "preview_alt": "Aperçu de {name}",
+    "role": "Rôle",
+    "year": "Année",
+    "overview": "Vue d’ensemble"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Une opportunité d’alternance, un projet, une question ? Écrivez-moi.",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Votre message",
+    "send": "Envoyer le message",
+    "sending": "Envoi…",
+    "sent": "Envoyé",
+    "error": "Une erreur est survenue. Réessaie ou contacte-moi directement par email.",
+    "validation": {
+      "name_min": "Le nom doit faire au moins 2 caractères.",
+      "email_invalid": "Adresse email invalide.",
+      "message_min": "Le message doit faire au moins 10 caractères.",
+      "message_max": "Le message ne peut pas dépasser 5000 caractères."
+    },
+    "or": "Ou directement",
+    "phone_label": "Téléphone",
+    "location": "Localisation",
+    "location_value": "Dijon, France",
+    "availability_label": "Disponibilité",
+    "availability_value": "Dès maintenant"
+  },
+  "footer": {
+    "tagline": "Développeur full stack — Dijon, France",
+    "rights": "Tous droits réservés.",
+    "built": "Conçu et développé par Esteban Fichet",
+    "connect_label": "Discutons",
+    "cta_pre": "On",
+    "cta_italic": "construit",
+    "cta_post": "ensemble ?",
+    "sitemap": "Sitemap",
+    "networks": "Réseaux"
+  }
+}
