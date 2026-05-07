@@ -19,7 +19,7 @@ export default async function ProjectsPage({ params }: Props) {
   const th = await getTranslations("headings.all_work");
 
   return (
-    <section className="relative mx-auto max-w-[1500px] px-6 lg:px-12 pt-32 md:pt-44 pb-24">
+    <section className="relative mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12 pt-28 sm:pt-32 md:pt-44 pb-16 sm:pb-24">
       <SectionHeading index="/ ALL WORK" title={th("title")} italic={th("italic")} subtitle={t("subtitle")} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">

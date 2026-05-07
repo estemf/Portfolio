@@ -68,13 +68,13 @@ export function ProjectCard({ project, index }: Props) {
           </div>
         </div>
 
-        <div className="p-7 md:p-9 flex flex-col gap-4">
+        <div className="p-5 sm:p-7 md:p-9 flex flex-col gap-3 sm:gap-4">
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="font-mono text-[10px] uppercase tracking-widest text-muted mb-2">
                 {project.category[locale]}
               </p>
-              <h3 className="font-display text-3xl md:text-4xl tracking-tighter">
+              <h3 className="font-display text-2xl sm:text-3xl md:text-4xl tracking-tighter break-words">
                 {project.name}
               </h3>
             </div>
@@ -83,7 +83,7 @@ export function ProjectCard({ project, index }: Props) {
             </span>
           </div>
 
-          <p className="text-base text-foreground-soft leading-relaxed">
+          <p className="text-sm sm:text-base text-foreground-soft leading-relaxed">
             {project.tagline[locale]}
           </p>
 

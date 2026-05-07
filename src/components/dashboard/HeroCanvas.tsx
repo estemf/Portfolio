@@ -139,11 +139,11 @@ function Blob() {
 
 export function HeroCanvas() {
   return (
-    <div className="absolute inset-0 -z-10 pointer-events-none">
+    <div className="absolute inset-0 -z-10 pointer-events-none opacity-70 sm:opacity-100">
       <Canvas
         camera={{ position: [0, 0, 5], fov: 45 }}
-        gl={{ antialias: true, alpha: true }}
-        dpr={[1, 1.8]}
+        gl={{ antialias: true, alpha: true, powerPreference: "low-power" }}
+        dpr={[1, 1.5]}
       >
         <Suspense fallback={null}>
           <ambientLight intensity={0.7} />

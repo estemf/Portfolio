@@ -65,8 +65,10 @@ export function Header() {
   return (
     <header
       className={clsx(
-        "fixed top-4 inset-x-4 lg:inset-x-8 z-50 transition-all duration-500 rounded-full",
-        scrolled
+        "fixed top-4 inset-x-4 lg:inset-x-8 z-50",
+        "transition-[background-color,border-color,box-shadow] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
+        open ? "rounded-[28px]" : "rounded-full",
+        scrolled || open
           ? "backdrop-blur-xl bg-background/70 border border-border-strong/40 shadow-[0_8px_30px_-12px_rgba(26,22,18,0.18)]"
           : "bg-transparent border border-transparent",
       )}
@@ -85,7 +87,7 @@ export function Header() {
 
         <nav
           ref={navRef}
-          className="hidden md:flex items-center gap-1 text-sm relative"
+          className="hidden md:flex items-center gap-2 text-sm relative"
         >
           {pill && (
             <span
@@ -153,37 +155,40 @@ export function Header() {
 
       <div
         className={clsx(
-          "md:hidden mx-2 mt-2 rounded-3xl border bg-background/95 backdrop-blur-xl overflow-hidden",
-          "transition-[max-height,opacity,border-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
-          open
-            ? "max-h-96 opacity-100 border-border-strong/40"
-            : "max-h-0 opacity-0 pointer-events-none border-transparent",
+          "md:hidden overflow-hidden",
+          "transition-[max-height,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0 pointer-events-none",
         )}
       >
-        <nav className="flex flex-col p-6 gap-4 text-base">
-          {links.map((l) => (
+        <nav className="flex flex-col px-6 pb-6 pt-1 gap-4 text-base">
+          {links.map((l, i) => (
             <Link
-              key={l.href}
+              key={`${l.href}-${open}`}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="hover:text-accent"
+              className="animate-nav-item-in hover:text-accent transition-colors"
+              style={{ animationDelay: `${60 + i * 60}ms` }}
             >
               {l.label}
             </Link>
           ))}
-          <div className="flex gap-3 pt-4 border-t border-border">
+          <div
+            key={`actions-${open}`}
+            className="animate-nav-item-in flex gap-3 pt-4 border-t border-border"
+            style={{ animationDelay: `${60 + links.length * 60}ms` }}
+          >
             <Link
               href={pathname}
               locale={otherLocale}
               onClick={() => setOpen(false)}
-              className="border border-border-strong/50 rounded-full px-3 py-1.5 text-xs"
+              className="border border-border-strong/50 rounded-full px-3 py-1.5 text-xs font-mono uppercase tracking-widest hover:border-ink hover:text-ink transition-colors"
             >
-              {otherLocale.toUpperCase()}
+              {otherLocale}
             </Link>
             <a
               href="/cv-esteban-fichet.pdf"
               download
-              className="bg-ink text-background rounded-full px-3 py-1.5 text-xs flex items-center gap-1"
+              className="bg-ink text-background rounded-full px-3.5 py-1.5 text-xs font-mono uppercase tracking-widest flex items-center gap-1 hover:bg-accent transition-colors"
             >
               CV <ArrowUpRight className="w-3 h-3" />
             </a>

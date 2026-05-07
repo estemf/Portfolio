@@ -12,13 +12,13 @@ export function ContactCTA() {
   const tCta = useTranslations("contact_cta");
 
   return (
-    <section className="relative mx-auto max-w-[1500px] px-6 lg:px-12 py-24 md:py-32">
+    <section className="relative mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12 py-16 sm:py-24 md:py-32">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-        className="relative bg-background-warm rounded-[32px] p-10 md:p-20 overflow-hidden border border-border-strong/30"
+        className="relative bg-background-warm rounded-[24px] sm:rounded-[32px] p-7 sm:p-10 md:p-20 overflow-hidden border border-border-strong/30"
       >
         <div
           className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full opacity-50 animate-float-slow"
@@ -40,7 +40,7 @@ export function ContactCTA() {
           <p className="font-mono text-[10px] uppercase tracking-widest text-accent mb-6">
             / 04 — Contact
           </p>
-          <h2 className="font-display text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.92] max-w-4xl">
+          <h2 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.92] max-w-4xl">
             {tCta("line1")}
             <br />
             <span className="font-display-italic text-accent">{tCta("italic")}</span>
@@ -50,12 +50,12 @@ export function ContactCTA() {
           <p className="mt-8 max-w-xl text-foreground-soft text-base md:text-lg leading-relaxed">
             {t("contact_cta_sub")}
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <MagneticButton href="/contact" className="btn-primary">
+          <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
+            <MagneticButton href="/contact" className="btn-primary w-full sm:w-auto justify-center">
               <span>{tHero("cta_contact")}</span>
               <ArrowUpRight className="w-4 h-4" />
             </MagneticButton>
-            <a href="mailto:estebanfichet@icloud.com" className="btn-secondary">
+            <a href="mailto:estebanfichet@icloud.com" className="btn-secondary w-full sm:w-auto justify-center break-all sm:break-normal">
               estebanfichet@icloud.com
             </a>
           </div>

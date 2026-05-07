@@ -19,7 +19,7 @@ export default async function ContactPage({ params }: Props) {
   const th = await getTranslations("headings.contact");
 
   return (
-    <section className="relative mx-auto max-w-[1500px] px-6 lg:px-12 pt-32 md:pt-44 pb-24">
+    <section className="relative mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12 pt-28 sm:pt-32 md:pt-44 pb-16 sm:pb-24">
       <SectionHeading
         index="/ CONTACT"
         title={th("title")}
@@ -27,10 +27,10 @@ export default async function ContactPage({ params }: Props) {
         subtitle={t("subtitle")}
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-12 lg:gap-20">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-10 sm:gap-12 lg:gap-20">
         <ContactForm />
 
-        <aside className="flex flex-col gap-8 lg:border-l lg:border-border-strong/30 lg:pl-12">
+        <aside className="flex flex-col gap-6 sm:gap-8 lg:border-l lg:border-border-strong/30 lg:pl-12">
           <p className="font-mono text-xs uppercase tracking-widest text-accent">
             / {t("or")}
           </p>
@@ -85,8 +85,8 @@ function InfoLine({
       <span
         className={
           accent
-            ? "text-accent font-display text-xl tracking-tight"
-            : "font-display text-xl tracking-tight"
+            ? "text-accent font-display text-lg sm:text-xl tracking-tight break-words"
+            : "font-display text-lg sm:text-xl tracking-tight break-words"
         }
       >
         {value}

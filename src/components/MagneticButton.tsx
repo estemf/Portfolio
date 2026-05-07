@@ -26,6 +26,7 @@ export function MagneticButton({
 
   function handleMove(e: MouseEvent<HTMLDivElement>) {
     if (!ref.current) return;
+    if (typeof window !== "undefined" && !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
     const rect = ref.current.getBoundingClientRect();
     const dx = e.clientX - (rect.left + rect.width / 2);
     const dy = e.clientY - (rect.top + rect.height / 2);

@@ -106,13 +106,15 @@ export function ContactForm() {
         disabled={disabled}
         className="btn-primary self-start disabled:opacity-60 cursor-pointer"
       >
-        {status === "sent" ? (
-          <>{t("sent")} <Check className="w-4 h-4" /></>
-        ) : status === "loading" ? (
-          t("sending")
-        ) : (
-          <>{t("send")} <ArrowUpRight className="w-4 h-4" /></>
-        )}
+        <span className="inline-flex items-center gap-2.5">
+          {status === "sent" ? (
+            <>{t("sent")} <Check className="w-4 h-4" /></>
+          ) : status === "loading" ? (
+            t("sending")
+          ) : (
+            <>{t("send")} <ArrowUpRight className="w-4 h-4" /></>
+          )}
+        </span>
       </motion.button>
     </form>
   );

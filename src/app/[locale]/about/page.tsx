@@ -21,16 +21,16 @@ export default async function AboutPage({ params }: Props) {
 
   return (
     <>
-      <section className="relative pt-32 md:pt-44 pb-16 md:pb-24 mx-auto max-w-[1500px] px-6 lg:px-12">
+      <section className="relative pt-28 sm:pt-32 md:pt-44 pb-12 sm:pb-16 md:pb-24 mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12">
         <SectionHeading index="01 / ABOUT" title={th("about.title")} italic={th("about.italic")} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-20 items-start">
-          <div className="flex flex-col gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 sm:gap-12 lg:gap-20 items-start">
+          <div className="flex flex-col gap-10 sm:gap-14 order-2 lg:order-1">
             <div>
               <p className="font-mono text-[10px] uppercase tracking-widest text-accent mb-5">
                 / {t("intro_label")}
               </p>
-              <p className="text-2xl md:text-3xl leading-[1.4] text-foreground font-display tracking-tight">
+              <p className="text-xl sm:text-2xl md:text-3xl leading-[1.4] text-foreground font-display tracking-tight">
                 {t("intro")}
               </p>
             </div>
@@ -54,7 +54,7 @@ export default async function AboutPage({ params }: Props) {
             </div>
           </div>
 
-          <div className="relative lg:sticky lg:top-32">
+          <div className="relative lg:sticky lg:top-32 order-1 lg:order-2 max-w-sm sm:max-w-md lg:max-w-none">
             <div className="relative aspect-[4/5] rounded-[28px] border border-border-strong/40 bg-surface overflow-hidden shadow-[0_30px_60px_-30px_rgba(26,22,18,0.3)]">
               <div
                 className="absolute inset-0 -z-0"
@@ -87,12 +87,12 @@ export default async function AboutPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="relative mx-auto max-w-[1500px] px-6 lg:px-12 py-20">
+      <section className="relative mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12 py-14 sm:py-20">
         <SectionHeading index="02 / EXPERIENCE" title={th("experience.title")} italic={th("experience.italic")} />
         <Timeline entries={experience} />
       </section>
 
-      <section className="relative mx-auto max-w-[1500px] px-6 lg:px-12 py-20">
+      <section className="relative mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12 py-14 sm:py-20">
         <SectionHeading index="03 / EDUCATION" title={th("education.title")} italic={th("education.italic")} />
         <Timeline entries={education} />
       </section>

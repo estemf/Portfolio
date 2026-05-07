@@ -116,6 +116,7 @@ export function HeroTerminal() {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.7, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
       className="w-full max-w-[560px] rounded-xl overflow-hidden border border-black/30 bg-[#15110d] shadow-[0_40px_80px_-30px_rgba(26,22,18,0.55)]"
+      style={{ contain: "paint" }}
     >
       <div className="relative flex items-center px-4 py-2.5 bg-[#1f1a14] border-b border-white/5">
         <div className="flex items-center gap-2">
@@ -123,12 +124,12 @@ export function HeroTerminal() {
           <span className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
           <span className="w-3 h-3 rounded-full bg-[#27c93f]" />
         </div>
-        <span className="absolute left-1/2 -translate-x-1/2 font-mono text-[11px] text-white/40 tracking-wide">
+        <span className="absolute left-1/2 -translate-x-1/2 font-mono text-[10px] sm:text-[11px] text-white/40 tracking-wide whitespace-nowrap">
           esteban@portfolio — node
         </span>
       </div>
 
-      <div className="p-5 font-mono text-[12.5px] leading-relaxed min-h-[260px] text-white/85">
+      <div className="p-4 sm:p-5 font-mono text-[10.5px] sm:text-[12.5px] leading-relaxed min-h-[240px] sm:min-h-[260px] text-white/85 overflow-x-auto">
         {lines.slice(0, lineIdx + 1).map((line, i) => {
           const isCurrent = i === lineIdx && !done;
           const totalLen = line.tokens.reduce((sum, tok) => sum + tok.text.length, 0);

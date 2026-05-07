@@ -10,7 +10,7 @@ export function Skills() {
   const t = useTranslations("sections");
 
   return (
-    <section className="relative mx-auto max-w-[1500px] px-6 lg:px-12 py-24 md:py-32">
+    <section className="relative mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12 py-16 sm:py-24 md:py-32">
       <SectionHeading
         index="03 / SKILLS"
         title={t("skills").split(" ")[0] ?? t("skills")}
@@ -26,7 +26,7 @@ export function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: gi * 0.06, ease: [0.22, 1, 0.36, 1] }}
-            className="rounded-3xl border border-border-strong/30 bg-surface p-7 flex flex-col gap-5 group hover:bg-surface-elevated hover:border-foreground transition-all duration-500"
+            className="rounded-3xl border border-border-strong/30 bg-surface p-6 sm:p-7 flex flex-col gap-4 sm:gap-5 group hover:bg-surface-elevated hover:border-foreground transition-all duration-500"
           >
             <div className="flex items-baseline justify-between">
               <span className="font-mono text-[10px] uppercase tracking-widest text-muted">

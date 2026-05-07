@@ -12,7 +12,7 @@ export function FeaturedProjects() {
   const th = useTranslations("headings.featured");
 
   return (
-    <section className="relative mx-auto max-w-[1500px] px-6 lg:px-12 py-24 md:py-32">
+    <section className="relative mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12 py-16 sm:py-24 md:py-32">
       <SectionHeading
         index="02 / WORK"
         title={th("title")}

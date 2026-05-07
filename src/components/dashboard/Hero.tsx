@@ -1,7 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
@@ -32,6 +33,13 @@ const SERVICE_ICONS = [Boxes, ShoppingBag, Layout] as const;
 
 export function Hero() {
   const t = useTranslations("hero");
+  const [activeTag, setActiveTag] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => setActiveTag((i) => (i + 1) % 3), 2800);
+    return () => clearInterval(id);
+  }, []);
+
   const STATS = [
     { value: "6", label: t("stats.projects") },
     { value: "2", label: t("stats.experience") },
@@ -44,7 +52,7 @@ export function Hero() {
   ] as const;
 
   return (
-    <section className="relative min-h-[100svh] flex flex-col overflow-hidden">
+    <section className="relative min-h-[100svh] flex flex-col overflow-x-clip">
       <HeroCanvas />
 
       <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/0 to-background/60 pointer-events-none -z-[5]" />
@@ -108,38 +116,86 @@ export function Hero() {
         ))}
       </motion.div>
 
-      <div className="relative mx-auto w-full max-w-[1500px] px-6 lg:px-12 pt-24 lg:pt-28 pb-20 flex flex-col flex-1 justify-between">
+      <div className="relative mx-auto w-full max-w-[1500px] px-5 sm:px-6 lg:px-12 pt-28 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 flex flex-col flex-1 justify-between gap-12 sm:gap-0">
         <div className="flex flex-col">
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center gap-3 mb-6"
+            className="mb-6"
           >
-            <span className="tag tag-accent">
-              <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse-soft" />
-              {t("status")}
-            </span>
-            <span className="hidden md:inline-flex tag">
-              <MapPin className="w-3 h-3" />
-              Dijon, FR
-            </span>
-            <span className="hidden lg:inline-flex tag">
-              <Sparkles className="w-3 h-3" />
-              {t("tag_freelance")}
-            </span>
+            {/* Mobile : carousel une bulle à la fois */}
+            <div className="md:hidden h-8 flex items-center overflow-hidden">
+              <AnimatePresence mode="wait">
+                {activeTag === 0 && (
+                  <motion.span
+                    key="tag-0"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                    className="tag tag-accent whitespace-nowrap"
+                  >
+                    <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse-soft shrink-0" />
+                    {t("status")}
+                  </motion.span>
+                )}
+                {activeTag === 1 && (
+                  <motion.span
+                    key="tag-1"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                    className="tag tag-accent whitespace-nowrap"
+                  >
+                    <MapPin className="w-3 h-3 shrink-0" />
+                    Dijon, FR
+                  </motion.span>
+                )}
+                {activeTag === 2 && (
+                  <motion.span
+                    key="tag-2"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                    className="tag tag-accent whitespace-nowrap"
+                  >
+                    <Sparkles className="w-3 h-3 shrink-0" />
+                    {t("tag_freelance")}
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Desktop : toutes les bulles en ligne */}
+            <div className="hidden md:flex items-center gap-3">
+              <span className="tag tag-accent">
+                <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse-soft" />
+                {t("status")}
+              </span>
+              <span className="tag tag-accent">
+                <MapPin className="w-3 h-3" />
+                Dijon, FR
+              </span>
+              <span className="hidden lg:inline-flex tag tag-accent">
+                <Sparkles className="w-3 h-3" />
+                {t("tag_freelance")}
+              </span>
+            </div>
           </motion.div>
 
           <h1 className="font-display tracking-tighter leading-[0.9]">
-            <span className="block text-[clamp(2.75rem,9vw,9rem)]">
+            <span className="block text-[clamp(3.5rem,9vw,9rem)]">
               <RevealText delay={0.05} immediate>{t("title_pre")}</RevealText>
             </span>
-            <span className="block text-[clamp(2.75rem,9vw,9rem)] font-display-italic text-accent">
+            <span className="block text-[clamp(3.5rem,9vw,9rem)] font-display-italic text-accent">
               <RevealText delay={0.18} immediate>{t("title_main")}.</RevealText>
             </span>
           </h1>
 
-          <div className="mt-6 lg:mt-8 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,560px)] gap-10 lg:gap-16 items-start">
+          <div className="mt-6 lg:mt-8 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,560px)] gap-8 lg:gap-16 items-start">
             <div className="flex flex-col gap-8 max-w-xl">
               <motion.p
                 initial={{ opacity: 0, y: 12 }}
@@ -154,13 +210,13 @@ export function Hero() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.65 }}
-                className="flex flex-wrap items-center gap-4"
+                className="flex flex-wrap items-center gap-3 sm:gap-4"
               >
-                <MagneticButton href="/projects" className="btn-primary">
+                <MagneticButton href="/projects" className="btn-primary w-full sm:w-auto justify-center max-sm:!text-sm max-sm:!px-5 max-sm:!py-2.5">
                   <span>{t("cta_projects")}</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </MagneticButton>
-                <Link href="/contact" className="btn-secondary">
+                <Link href="/contact" className="btn-secondary w-full sm:w-auto justify-center max-sm:!text-sm max-sm:!px-5 max-sm:!py-2.5">
                   {t("cta_contact")}
                 </Link>
               </motion.div>
@@ -176,7 +232,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.85 }}
-          className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-px bg-border-strong/40 border border-border-strong/40 rounded-2xl overflow-hidden"
+          className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-px bg-border-strong/40 border border-border-strong/40 rounded-2xl overflow-hidden"
         >
           {SERVICES.map((service, i) => {
             const Icon = SERVICE_ICONS[i];
@@ -204,17 +260,17 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="mt-12 flex flex-wrap items-stretch border-t border-border-strong/40"
+          className="mt-10 sm:mt-12 flex flex-wrap items-stretch border-t border-border-strong/40"
         >
           {STATS.map((stat) => (
             <div
               key={stat.label}
-              className="flex-1 min-w-[120px] flex flex-col gap-1 pt-6 pr-8 border-r border-border-strong/40 last:border-r-0"
+              className="flex-1 min-w-0 sm:min-w-[120px] flex flex-col gap-1 pt-5 sm:pt-6 pr-4 sm:pr-8 border-r border-border-strong/40 last:border-r-0 last:pr-0"
             >
-              <span className="font-display text-4xl md:text-5xl tracking-tighter text-foreground">
+              <span className="font-display text-3xl sm:text-4xl md:text-5xl tracking-tighter text-foreground">
                 {stat.value}
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-muted">
+              <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-widest text-muted leading-tight">
                 {stat.label}
               </span>
             </div>
