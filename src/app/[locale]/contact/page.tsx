@@ -44,8 +44,8 @@ export default async function ContactPage({ params }: Props) {
           <InfoLine
             icon={<Phone className="w-4 h-4" />}
             label={t("phone_label")}
-            value="+33 6 80 20 35 57"
-            href="tel:+33680203557"
+            value="06 80 20 35 57"
+            href="tel:0680203557"
           />
           <InfoLine
             icon={<MapPin className="w-4 h-4" />}

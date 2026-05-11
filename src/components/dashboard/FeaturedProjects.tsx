@@ -14,7 +14,7 @@ export function FeaturedProjects() {
   return (
     <section className="relative mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12 py-16 sm:py-24 md:py-32">
       <SectionHeading
-        index="02 / WORK"
+        index={th("index")}
         title={th("title")}
         italic={th("italic")}
         subtitle={t("selected_work_sub")}

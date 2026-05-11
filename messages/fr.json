@@ -19,7 +19,7 @@
     "identity": {
       "label": "Profil",
       "status": "Dispo",
-      "role": "Développeur Full Stack · 21 ans",
+      "role": "Développeur Full Stack · 22 ans",
       "years": "Depuis 2023"
     },
     "terminal": {
@@ -61,12 +61,13 @@
     "contact_cta_sub": "Je suis à la recherche d’une alternance en développement pour 2026."
   },
   "headings": {
-    "featured": { "title": "Projets", "italic": "sélectionnés" },
-    "all_work": { "title": "Tout", "italic": "le travail" },
-    "about": { "title": "À", "italic": "propos" },
-    "experience": { "title": "Expé", "italic": "riences" },
-    "education": { "title": "For", "italic": "mation" },
-    "contact": { "title": "Disons-nous", "italic": "bonjour." }
+    "featured": { "index": "02 / PROJETS", "title": "Projets ", "italic": "sélectionnés" },
+    "all_work": { "index": "/ MES PROJETS", "title": "Mes ", "italic": "projets" },
+    "about": { "index": "01 / À PROPOS", "title": "À ", "italic": "propos" },
+    "experience": { "index": "02 / EXPÉRIENCE", "title": "Expé", "italic": "riences" },
+    "education": { "index": "03 / FORMATION", "title": "For", "italic": "mation" },
+    "skills": { "index": "03 / COMPÉTENCES", "title": "Stack ", "italic": "technique" },
+    "contact": { "title": "Disons-nous ", "italic": "bonjour." }
   },
   "contact_cta": {
     "line1": "On construit",
@@ -76,9 +77,9 @@
   "about": {
     "title": "À propos",
     "intro_label": "Qui je suis",
-    "intro": "Esteban Fichet, 22 ans, basé à Dijon. Passionné par le code depuis le lycée, je conçois des applications web performantes en mêlant exigence technique et soin apporté à l’expérience utilisateur. Curieux et autonome, j’aime gérer un projet de bout en bout.",
+    "intro": "Esteban Fichet, 22 ans, basé à Dijon.\nPassionné par le développement, je conçois des applications web et mobiles performantes en alliant exigence technique et attention portée aux besoins utilisateurs.\nCurieux et autonome, je suis capable de gérer un projet de bout en bout, de l’étude du besoin jusqu’à la mise en production, mais aussi d’intervenir sur un projet existant afin d’améliorer l’existant ou développer de nouvelles fonctionnalités.",
     "approach_label": "Ma façon de travailler",
-    "approach": "Je vois chaque projet comme un produit : comprendre le besoin métier d’abord, puis construire une architecture sobre qui tient dans le temps. J’écris du code lisible, je documente ce qui compte, et je livre tôt pour itérer vite.",
+    "approach": "Je vois chaque projet comme une opportunité de progresser, aussi bien techniquement qu’humainement. Pour moi, chaque projet est avant tout un produit : comprendre les besoins métier, puis concevoir une architecture propre, moderne et pensée pour durer.\nJ’accorde une attention particulière à la lisibilité du code et à des livraisons rapides afin d’avancer efficacement avec le client et construire un produit qui répond concrètement à ses besoins.",
     "education": "Formation",
     "experience": "Expériences",
     "now": "En cours",

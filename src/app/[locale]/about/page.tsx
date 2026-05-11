@@ -22,7 +22,7 @@ export default async function AboutPage({ params }: Props) {
   return (
     <>
       <section className="relative pt-28 sm:pt-32 md:pt-44 pb-12 sm:pb-16 md:pb-24 mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12">
-        <SectionHeading index="01 / ABOUT" title={th("about.title")} italic={th("about.italic")} />
+        <SectionHeading index={th("about.index")} title={th("about.title")} italic={th("about.italic")} />
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-10 sm:gap-12 lg:gap-20 items-start">
           <div className="flex flex-col gap-10 sm:gap-14 order-2 lg:order-1">
@@ -30,7 +30,7 @@ export default async function AboutPage({ params }: Props) {
               <p className="font-mono text-[10px] uppercase tracking-widest text-accent mb-5">
                 / {t("intro_label")}
               </p>
-              <p className="text-xl sm:text-2xl md:text-3xl leading-[1.4] text-foreground font-display tracking-tight">
+              <p className="text-xl sm:text-2xl md:text-3xl leading-[1.4] text-foreground font-display tracking-tight whitespace-pre-line">
                 {t("intro")}
               </p>
             </div>
@@ -38,7 +38,7 @@ export default async function AboutPage({ params }: Props) {
               <p className="font-mono text-[10px] uppercase tracking-widest text-accent mb-5">
                 / {t("approach_label")}
               </p>
-              <p className="text-base md:text-lg leading-relaxed text-foreground-soft">
+              <p className="text-base md:text-lg leading-relaxed text-foreground-soft whitespace-pre-line">
                 {t("approach")}
               </p>
             </div>
@@ -73,7 +73,7 @@ export default async function AboutPage({ params }: Props) {
               />
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest z-20 text-foreground-soft">
                 <span>Esteban Fichet</span>
-                <span className="text-accent">/ 21</span>
+                <span className="text-accent">/ 22</span>
               </div>
               <div className="absolute top-4 left-4 right-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest z-20 text-foreground-soft">
                 <span>FR — Dijon</span>
@@ -88,12 +88,12 @@ export default async function AboutPage({ params }: Props) {
       </section>
 
       <section className="relative mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12 py-14 sm:py-20">
-        <SectionHeading index="02 / EXPERIENCE" title={th("experience.title")} italic={th("experience.italic")} />
+        <SectionHeading index={th("experience.index")} title={th("experience.title")} italic={th("experience.italic")} />
         <Timeline entries={experience} />
       </section>
 
       <section className="relative mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12 py-14 sm:py-20">
-        <SectionHeading index="03 / EDUCATION" title={th("education.title")} italic={th("education.italic")} />
+        <SectionHeading index={th("education.index")} title={th("education.title")} italic={th("education.italic")} />
         <Timeline entries={education} />
       </section>
     </>

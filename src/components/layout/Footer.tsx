@@ -38,7 +38,7 @@ export function Footer() {
               </a>
             </div>
 
-            <div className="grid grid-cols-2 gap-8 lg:justify-self-end lg:text-right">
+            <div className="grid grid-cols-[1fr_auto] gap-6 sm:gap-8 lg:justify-self-end lg:text-right">
               <div className="flex flex-col gap-3">
                 <span className="font-mono text-[10px] uppercase tracking-widest text-background/50">
                   {t("sitemap")}
@@ -49,13 +49,13 @@ export function Footer() {
                 <Link href="/contact" className="hover:text-accent-warm transition-colors">{tNav("contact")}</Link>
               </div>
               <div className="flex flex-col gap-3">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-background/50">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-background/50 whitespace-nowrap">
                   {t("networks")}
                 </span>
-                <a href="https://linkedin.com/in/esteban-fichet" target="_blank" rel="noopener noreferrer" className="hover:text-accent-warm transition-colors">LinkedIn</a>
-                <a href="mailto:estebanfichet@icloud.com" className="hover:text-accent-warm transition-colors">Email</a>
-                <a href="tel:+33680203557" className="hover:text-accent-warm transition-colors">+33 6 80 20 35 57</a>
-                <a href="/cv-esteban-fichet.pdf" download className="hover:text-accent-warm transition-colors">{tNav("cv")}</a>
+                <a href="https://linkedin.com/in/esteban-fichet" target="_blank" rel="noopener noreferrer" className="hover:text-accent-warm transition-colors whitespace-nowrap">LinkedIn</a>
+                <a href="mailto:estebanfichet@icloud.com" className="hover:text-accent-warm transition-colors whitespace-nowrap">Email</a>
+                <a href="tel:+33680203557" className="hover:text-accent-warm transition-colors whitespace-nowrap">06 80 20 35 57</a>
+                <a href="/cv-esteban-fichet.pdf" download className="hover:text-accent-warm transition-colors whitespace-nowrap">{tNav("cv")}</a>
               </div>
             </div>
           </div>

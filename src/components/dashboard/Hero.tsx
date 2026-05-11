@@ -125,7 +125,7 @@ export function Hero() {
             className="mb-6"
           >
             {/* Mobile : carousel une bulle à la fois */}
-            <div className="md:hidden h-8 flex items-center overflow-hidden">
+            <div className="md:hidden h-10 flex items-center overflow-hidden">
               <AnimatePresence mode="wait">
                 {activeTag === 0 && (
                   <motion.span

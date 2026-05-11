@@ -19,7 +19,7 @@
     "identity": {
       "label": "Profile",
       "status": "Open",
-      "role": "Full Stack Developer · 21",
+      "role": "Full Stack Developer · 22",
       "years": "Since 2023"
     },
     "terminal": {
@@ -61,12 +61,13 @@
     "contact_cta_sub": "I’m looking for a development apprenticeship for 2026."
   },
   "headings": {
-    "featured": { "title": "Selected", "italic": "work" },
-    "all_work": { "title": "All", "italic": "work" },
-    "about": { "title": "About", "italic": "me" },
-    "experience": { "title": "Expe", "italic": "rience" },
-    "education": { "title": "Edu", "italic": "cation" },
-    "contact": { "title": "Let’s say", "italic": "hello." }
+    "featured": { "index": "02 / WORK", "title": "Selected ", "italic": "work" },
+    "all_work": { "index": "/ ALL WORK", "title": "All", "italic": "work" },
+    "about": { "index": "01 / ABOUT", "title": "About", "italic": "me" },
+    "experience": { "index": "02 / EXPERIENCE", "title": "Expe", "italic": "rience" },
+    "education": { "index": "03 / EDUCATION", "title": "Edu", "italic": "cation" },
+    "skills": { "index": "03 / SKILLS", "title": "Tech ", "italic": "stack" },
+    "contact": { "title": "Let’s say ", "italic": "hello." }
   },
   "contact_cta": {
     "line1": "Let’s build",
@@ -76,9 +77,9 @@
   "about": {
     "title": "About",
     "intro_label": "Who I am",
-    "intro": "Esteban Fichet, 21, based in Dijon. Hooked on code since high school, I build performant web apps that balance technical rigor and user experience. Curious and self-driven, I enjoy taking projects from idea to production.",
+    "intro": "Esteban Fichet, 22, based in Dijon.\nPassionate about development, I design performant web and mobile applications by combining technical rigor with a strong focus on user needs.\nCurious and self-driven, I'm able to manage a project end-to-end — from requirements analysis to production — but also to step into an existing project to improve what's there or build new features.",
     "approach_label": "How I work",
-    "approach": "I treat every project like a product: understand the business need first, then build a sober architecture that holds up over time. I write readable code, document what matters, and ship early to iterate fast.",
+    "approach": "I see every project as an opportunity to grow, both technically and as a professional. For me, every project is first and foremost a product: understand the business needs, then design a clean, modern architecture built to last.\nI pay close attention to code readability and fast delivery cycles so I can move forward efficiently with the client and build something that truly meets their needs.",
     "education": "Education",
     "experience": "Experience",
     "now": "Current",

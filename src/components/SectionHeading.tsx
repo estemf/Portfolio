@@ -23,7 +23,7 @@ export function SectionHeading({ index, title, italic, subtitle }: Props) {
         {index}
       </span>
       <h2 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.92] break-words">
-        {title}{" "}
+        {title}
         {italic && (
           <span className="font-display-italic text-accent">{italic}</span>
         )}

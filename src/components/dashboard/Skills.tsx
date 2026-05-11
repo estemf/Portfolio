@@ -8,13 +8,14 @@ import { SectionHeading } from "@/components/SectionHeading";
 export function Skills() {
   const locale = useLocale() as "fr" | "en";
   const t = useTranslations("sections");
+  const th = useTranslations("headings.skills");
 
   return (
     <section className="relative mx-auto max-w-[1500px] px-5 sm:px-6 lg:px-12 py-16 sm:py-24 md:py-32">
       <SectionHeading
-        index="03 / SKILLS"
-        title={t("skills").split(" ")[0] ?? t("skills")}
-        italic={t("skills").split(" ").slice(1).join(" ")}
+        index={th("index")}
+        title={th("title")}
+        italic={th("italic")}
         subtitle={t("skills_sub")}
       />
 
