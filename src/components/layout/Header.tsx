@@ -136,7 +136,7 @@ export function Header() {
             {otherLocale}
           </Link>
           <a
-            href="/cv-esteban-fichet.pdf"
+            href="/CV-FICHET-Esteban.pdf"
             download
             className="font-mono text-[10px] uppercase tracking-widest flex items-center gap-1 bg-ink text-background rounded-full px-3.5 py-1.5 hover:bg-accent transition-colors"
           >
@@ -186,7 +186,7 @@ export function Header() {
               {otherLocale}
             </Link>
             <a
-              href="/cv-esteban-fichet.pdf"
+              href="/CV-FICHET-Esteban.pdf"
               download
               className="bg-ink text-background rounded-full px-3.5 py-1.5 text-xs font-mono uppercase tracking-widest flex items-center gap-1 hover:bg-accent transition-colors"
             >

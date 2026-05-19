@@ -207,6 +207,7 @@ body {
   text-transform: uppercase;
   color: var(--foreground-soft);
   background: var(--background);
+  -webkit-mask-image: radial-gradient(circle, black, black);
 }
 
 .tag-accent {
